@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Development &amp; Design | Kristen Payne</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100i,300i,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300i,400,700" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header -->
+        <header id="header" class="homepage">
+            <h1>Kristen Payne</h1>
+            <p class="subhead">Web Development &amp; Design</p>
+        </header>
+        <!-- end header -->
+        <!-- main -->
+        <main class="homepage">
+            <div id="picholder">
+                <img src="img/meandted2.jpg" alt="This is a picture of myself and an adorable dog" class="under">
+                <img src="img/meandted1.jpg" alt="This is a picture of myself and an adorable dog" title="Kristen Payne">
+            </div>
+            <h2>About Me</h2>
+            <p>I'm a developer currently living in Berkeley, CA. I have been coding webpages for 5 years and am truly passionate about taking webpages from the conception process to beautiful, usable finished pieces. I use Linux and my favorite editor to code in is Vim. I type 80wpm in Dvorak keyboard layout. I love solving problems and challenging myself in this ever-evolving field.
+            </p>
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+            <li>Javascript</li>
+            <li>User Experience/Responsive Design</li>
+        <li>Adobe Photoshop/Illustrator </li>
+        <li>Excel/Microsoft Office</li>
+        <li>Google Analytics/Webmaster Tools</li>
+            </ul>
+            <h2>Examples of Work</h2>
+            <a href="pages.html"><div class="cat-button">Webpages</div></a>
+            <a href="art.html"><div class="cat-button">Designs</div></a>
+            <a href="me.html"><div class="cat-button">More about me</div></a>
+        </main>
+        <!--end main-->
+        <!--footer -->
+        <footer>
+            <h2>Contact Me</h2>
+            <p class="subtext">I'd love to discuss your next project!</p>
+            <div id="errorBox"></div>
+            <form id="contact" method="POST" action="../sendmail.php" novalidate>
+                <label for="name">
+                    Name
+                    <input type="text" id="name" name="name" placeholder="Joey Joe Joe Shabadoo">
+                </label>
+                <label for="email">
+                    Email
+                    <input id="email" type="email" name="email" placeholder="email@xyz.com">
+                </label>
+                <label for="message">
+                    Message
+                    <textarea id="message" name="message" placeholder="Your website is so cool. I just have to hire you!"></textarea>
+                </label>
+                <button type="submit">
+                    Contact Me
+                </button>
+            </form>
+            <p class="tagline centered">
+                Coded from scratch by Kristen Payne
+                <br>
+                &copy; <span id="year"></span>
+            </p>
+        </footer>
+        <!-- end footer-->
+        <script src="script/jquery-3.3.1.js"></script>
+        <script src="script/script.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120837998-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120837998-1');
+</script>
+        
+    </div>
+</body>
+</html>

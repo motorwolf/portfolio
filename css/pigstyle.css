@@ -1,0 +1,251 @@
+:root {
+    --piggy: #ff69b4;
+    --piggy-hi: #FFA5D2;
+    --piggy-lo: #CC5490;
+    --hoof: #606060;
+    --hoof-hi: #b2b2b2;
+    --main-color: #0087FF;
+    --main-color-hi: #88C7FF;
+    --main-color-hi-hi: #C6E4FF;
+    --main-color-lo: #466783;
+    --main-color-lo-lo: #233342;
+}
+body {
+    background-color: white;
+    width: 100%;
+    font-size: 16px;
+}
+* {
+/* border: 1px solid red;*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+textarea {
+    width: 90%;
+    font-size: 1.5em;
+    margin: 10px auto 30px;
+    padding: 10px;
+    word-wrap: on;
+    height: auto;
+    min-height: 200px;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid var(--main-color-hi);
+}
+button {
+    font-size: 1.75em;
+    color: white; 
+    background-color: var(--main-color-hi);
+    border-radius: 10px;
+    width: 200px;
+    padding: 20px;
+    border: 0px;
+    margin-bottom: 30px;
+}
+h2 {
+    padding-top: 0.75em;
+    padding-bottom: 0.5em;
+    font-family: arial;
+    font-size: 2.5em;
+}
+main { 
+    text-align: center;
+    width: 100%;
+    background: var(--main-color);
+    color: white;
+    height: 90vh;
+    overflow: auto;
+}
+header, footer {
+    height: 5vh;
+    text-align: center;
+    padding: 10px;
+}
+#translation-wrap {
+    width: 80%;
+    margin: 30px auto 20px;
+    height: auto;
+    display: none;
+    flex-direction: column-reverse; /*formobile*/
+
+}
+#bubble{
+    position: relative;
+    height: 50%;
+    flex-grow: 4;
+    color: black;
+    background-color: white;
+    width: 100%;
+    font-size: 1.5em;
+    padding: 10px;
+    word-wrap: on;
+    /*min-height: 200px;*/ 
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid var(--main-color-hi);
+}
+#info {
+    margin: 0 auto;
+}
+#pighouse-wrap {
+width: 100%;
+margin: 0;
+}
+#pighouse {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 300px;
+    min-width: 300px;
+    height: 200px;
+    position: relative;
+    padding: 3px;
+    margin-top: 15px;
+}
+.pig {
+    position: absolute;
+    background-color: var(--piggy);
+}
+.body {
+    z-index: 1;
+    width: 135px;
+    bottom: 42px;
+    max-width: 144px;
+    height: 50%;
+    border-radius: 40px;
+    background: radial-gradient(farthest-corner at 40px 40px,white 0%,var(--piggy) 50%);
+}
+.head {
+    height: 97px;/*50%;*/
+    width: 117px;/*40%;*/
+    background: radial-gradient(farthest-corner at 40px 40px, white 0%, var(--piggy) 50%);
+    bottom: 89px;
+    left: 30%;
+    border-radius: 50%;
+    z-index:2;
+}
+.snout {
+    height: 39px;
+    width: 51px;
+    left: 58%;
+    bottom: 60%;
+    background: linear-gradient(to right,var(--piggy),white);
+    z-index: 3;
+    border-radius: 50%;
+    border-left: var(--piggy-hi) 10px solid; 
+}
+.nose {
+    left: 20%;
+    right: 20%;
+    top: 20%;
+    bottom: 20%;
+}
+.dotbox {
+    position: absolute;
+    height: 20px;
+    width: 30px;
+    z-index: 4;
+}
+.ear {
+    width: 25px;
+    height: 50px;
+    transform: skew(20deg);
+    border-radius: 15%;
+}
+.ear.left {
+    left: 91px;
+}
+.ear.right {
+    transform: skew(-20deg);
+    left: 146px;
+}
+.eyes {
+    left: 36%;
+    top: 14%;
+}
+.leg {
+    height: 57px;
+    border-radius: 25%;
+    width: 20px;
+    bottom: 17px;
+    transform: skew(5deg,40deg);
+}
+.leg.right-rear {
+    left: 5px;
+}
+.leg.left-rear {
+    bottom: 25px;
+    left: 23px;
+}
+.leg.right-front {
+    left: 90px;
+}
+.leg.left-front {
+    bottom: 25px;
+    left: 114px;
+}
+.dark {
+    background-color:  var(--piggy-lo);
+}
+.dot {
+   height: 100%;
+   width: 8px;
+   background-color: black;
+   border-radius: 50%;
+}
+.right{
+    float: right;
+}
+.left {
+    float: left;
+}
+#point {
+    position: absolute;
+    border-left: 50px solid var(--piggy);
+    border-top: 50px solid var(--piggy);
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    z-index: 1000;
+    left: 50px;
+    bottom: 20px;
+    width: 0px;
+    height: 0px;
+    background-color: var(--piggy);
+}
+
+ #talkbubble { margin: 0 auto;
+ width: 50%; height: 80px; background: red; position: relative; -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; } #talkbubble:before { content:""; position: absolute; right: 100%; top: 26px; width: 0; height: 0; border-top: 13px solid transparent; border-right: 26px solid red; border-bottom: 13px solid transparent; } 
+
+@media (min-width: 600px) {
+    #translation-wrap {
+        flex-direction: row;
+    }
+    #pighouse {
+        width: 30%;
+    }
+    #bubble {
+        min-height: 100px;
+    }
+    h2 {
+        font-size: 4em;
+    }
+    
+}
+@media (min-width: 1014px){
+    h1 {
+        font-size: 5em;
+    }
+    textarea {
+        margin: 30px auto;
+        width: 75%;
+    }
+    button {
+        width: 400px;
+    }
+    #bubble {
+        height: auto;
+    }
+
+}

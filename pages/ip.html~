@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kristen Payne Web Development &amp; Design</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100i,300i,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300i,400" rel="stylesheet"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+</head>
+<body>
+    <div id="wrapper">
+    <header id="header">
+        <a href="/"><h1>Kristen Payne</h1></a>
+        <p class="subhead">Web Development &amp; Design</p>
+    </header>
+    <main class="pages">
+<h2>InPink Fashion Jewelry</h2>
+    <p class="about">InPink was a fashion jewelry brand ecommerce site launched on the Magento platform. I developed several themes for the content, blog entries, product pages, landing pages optimized for conversion, and forms that delivered coupon codes integrated with mailchimp API for sign-ups.</p>
+    <figure>
+        <h3>Main Homepage</h3>
+        <img src="https://picsum.photos/g/200/300/?random">
+    <figcaption></figcaption>
+    </figure>
+    <figure>
+    <h3>Landing Page Form</h3>
+    <img src="../img/pns/website_menu.jpg" alt="Website Menu">
+    <figcaption>I coded this sign-up form to mirror a print promotion that was included in several event gift bags. The form was coded by me, and the print design was created by me in Photoshop.</figcaption>
+</figure>
+    <figure>
+        <h3>Email and Landing Page Featurettes</h3>
+        <p>Our email campaigns and promotions were the most important element of the site,offering unique styled content for the user. When buying fashion jewelry, the options are overwhelming. Our email campaigns featured curated content to take the guesswork out of accessorizing.</p>
+    <img src="../img/pns/website_menu.jpg" alt="Wordpress Blog">
+    <figcaption>Connie's Choice was a regular email feature that tied in with product promotions on a landing page on the site. The coding of the landing page and the email design were conceived by me.</figcaption>
+</figure>
+    <h3>Site Evolution</h3>
+    <p>As the site grew, our third-party platforms became more The Shopify platform eventually evolved to the point where it became a viable option for us, and I suggested we transition. We moved our entire catalog of 1,200 products to Shopify. I developed a custom front-end theme and migrated our many landing pages.</p>
+    <h3>Package Design</h3>
+    <p> An essential part of our brand was the experience of shopping. Small details, like packaging, were very important when communicating our branding message. Our luxurious gift wrap and branded tissue paper were provided with every purchase. These earring cards were designed in Photoshop and printed on heavy cardstock. 
+
+</main>
+    <footer>
+        <h2>Contact Me</h2>
+        <p class="subtext">I'd love to discuss your next project!</p>
+        <form id="contact">
+            <label for="name">
+                Name
+                <input type="text" id="name" name="name" placeholder="Joey Joe Joe Shabadoo">
+            </label>
+            <label for="email">
+                Email
+                <input id="email" type="email" name="email" placeholder="email@xyz.com">
+            </label>
+            <label for="message">
+                Message
+                <textarea id="message" type="textarea" name="message" placeholder="Your website is so cool. I just have to hire you!"></textarea>
+            </label>
+            <button type="submit">
+                Contact Me
+            </button>
+        </form>
+        <p class="tagline centered">
+            Coded from scratch by Kristen Payne
+            <br>
+            &copy; <span id="year"></span>
+        </p>
+        <script type="text/javascript" src="script/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="script/script.js"></script>
+    </footer>
+    </div>
+</body>
+</html>
