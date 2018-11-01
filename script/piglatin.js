@@ -3,7 +3,7 @@ const subhead = document.getElementById("info");
 const pigWrap = document.querySelector('#translation-wrap');
 const input = form.querySelector('textarea');
 const phraseBox = document.querySelector('#translation');
-const vowel = "aeiouy";
+let vowel = "aeiou";
 const punctuation = ".!?,;";
 const button = form.querySelector('button');
 let transFlag = false;
@@ -30,49 +30,49 @@ form.addEventListener('submit', (e) => {
 });
 
 
-function pigConvert(phrase){
+const pigConvert = (phrase) => {
     let words = phrase.map(word => piggify(word));
     return words;
 }
 
-function piggify(word){
+const piggify = (word,bonus) => {
+  //console.log("PIGGIFY RAN");
+    let bonusTried = true;
+    if(bonus){
+      vowel += bonus;
+      bonusTried = true;
+    }
     let newWord = "";
     let shifted = "";
-    let wordpunc = "";
-    let vowelized = false;
     for(let a = 0; a < word.length; a++){
-        for(let b = 0; b < vowel.length; b++){
-            if(word[a].toLowerCase() === vowel[b] && !vowelized){
-                newWord += word.slice(a) + shifted + "ay";
-                vowelized = true;
+      if(vowel.indexOf(word[a].toLowerCase()) !== -1){
+        //console.log("a vowel found at " + word[a]);
+        newWord = word.slice(a) + word.slice(0,a) + "ay";
+        //console.log(newWord);
+        if(/[A-Z]/.test(newWord)){
+          const properCase = newWord.split("").map((l,i) => {
+            if(i === 0){
+              return l.toUpperCase();
+            } else {
+              return l.toLowerCase();
             }
+          }).join("");
+          newWord = properCase;
+          //          console.log("newword contained a capital " + newWord);
         }
-        if (!vowelized){
-            shifted += word[a];
+        const wordpunc = newWord.split("").filter(char => punctuation.indexOf(char) !== -1).join("");
+        if(wordpunc.length !== 0){
+          let fixedWord = newWord.replace(/[!,\.\?;]/g,"");
+          newWord = fixedWord + wordpunc;
         }
-        for(let c = 0; c < punctuation.length; c++){
-            if(word[a] === punctuation[c]){
-                wordpunc += word.slice(a,a+1);
-            }
-        }
+        return newWord;
+      }
     }
-    if(/[A-Z]/.test(newWord)){
-        let properCase = newWord.toLowerCase().split("").map((letter,i)=>
-            {
-                if(i === 0){
-                    return letter.toUpperCase();
-                }
-                return letter;
-            }).join("");
-        newWord = properCase;
-    }
-    if(wordpunc !== ""){
-        let fixedWord = newWord.replace(/[!,\.\?;]/g,"");
-        fixedWord += wordpunc;
-        return fixedWord;
-
-    }
-    return newWord;
+  if(bonusTried){
+    return word;
+  } else {
+    piggify(word,"y");
+  }
 }
 
-console.log(pigConvert(input).join(" "));
+//console.log(pigConvert(input).join(" "));
